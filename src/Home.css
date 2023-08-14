@@ -1,0 +1,190 @@
+.container {
+  position: relative; /* This allows nested absolute positioning relative to this container */
+  width: 100%; /* Change to your desired width */
+  height: 100vh; /* Change to your desired height */
+}
+
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the image below the content */
+}
+
+.img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the image covers the entire container without distorting */
+}
+
+.top{
+  display: flex;
+  flex-direction: column;/* Spaces out child divs evenly */
+
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top:10px ;
+  transition: 0.8s ease-in-out;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  color: white;
+}
+.container .search {
+  text-align: center;
+  padding: 5px;
+}
+.container input {
+  padding:10px  ;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 12px 50px 5px rgba(0, 0, 0, 0.795);
+  border: 1px solid rgba(205, 205, 205, 0.8);
+  background: rgba(77, 255, 0, 0.053);
+}
+::placeholder{
+  color: rgba(0, 0, 0, 0.718);
+  font-size: 25px;
+}
+.top .description p{
+  position: fixed;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(268deg);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  padding-top: 15px;
+  margin-right:40%;
+}
+.container .temp h1{
+  font-size: 65px;
+}
+.location p{
+  font-size: 40px;
+}
+.temp h1, .feels p, .humidity p, .wind {
+  font-weight: bold;
+  transition: 1s ease-in;
+  font-size: 30px; /* Removes default margin for cleaner look */
+}
+
+.location p {
+  font-weight: bold;
+  transition: 1s ease-in;
+}
+
+.temp h1 {
+  font-size: 2rem;
+  transition: 1s ease-in;
+}
+
+@media (max-width:500px) {
+  .container {
+    top: 0;
+    left: 0;/* Change to your desired height */
+  }
+  .img1 {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Makes sure the image covers the entire container without distorting */
+  }
+  .container input {
+    padding:10px  ;
+    color: white;
+    font-size:10px;
+    margin-top: 35px;
+    box-shadow: 15px 12px 50px 5px rgba(18, 27, 16, 0.753);
+    border: 1px solid rgba(6, 6, 6, 0.8);
+    background: rgba(0, 0, 0, 0.134);
+  }
+  ::placeholder{
+    color: rgba(0, 0, 0, 0.718);
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .top{
+    display: flex;
+    flex-direction: column;/* Spaces out child divs evenly */
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top:5px ;
+    transition: 0.8s ease-in-out;
+  }
+  .bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-top: 120px;
+    color: rgb(255, 255, 255);
+  }
+  .container .temp h1{
+    font-size: 35px;
+  }
+  .location p{
+    font-size: 30px;
+  }
+  .temp h1, .feels p, .humidity p, .wind {
+    font-weight: bold;
+    transition: 1s ease-in;
+    font-size: 17px; /* Removes default margin for cleaner look */
+  }
+  
+  .location p {
+    font-weight: bold;
+    transition: 1s ease-in;
+  }
+  
+  .temp h1 {
+    font-size: 15px;
+    transition: 1s ease-in;
+  }
+}
+@media (min-width:1500px){
+  .container input {
+    padding:10px  ;
+    color: white;
+    font-size:30px;
+    margin-top: 35px;
+    box-shadow: 15px 12px 50px 5px rgba(18, 27, 16, 0.753);
+    border: 1px solid rgba(6, 6, 6, 0.8);
+    background: rgba(0, 0, 0, 0.134);
+  }
+  ::placeholder{
+    color: rgba(0, 0, 0, 0.718);
+    font-size: 35px;
+  }
+  .container .temp h1{
+    font-size: 55px;
+  }
+  .location p{
+    font-size: 50px;
+  }
+  .temp h1, .feels p, .humidity p, .wind {
+    font-weight: bold;
+    transition: 1s ease-in;
+    font-size: 30px; /* Removes default margin for cleaner look */
+  }
+  
+  .location p {
+    font-weight: bold;
+    transition: 1s ease-in;
+  }
+  
+  .temp h1 {
+    font-size: 15px;
+    transition: 1s ease-in;
+  }
+}
